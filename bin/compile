@@ -192,6 +192,8 @@ cp $BP_DIR/conf/nginx/nginx.conf.default $BUILD_DIR/.heroku/php/etc/nginx/nginx.
 # remember the version for future upgrade handling
 echo $NGINX_VERSION > $CACHE_DIR/nginx_version
 
+source $BP_DIR/bin/facedetect
+
 # handle extensions for PHP
 if [[ "${PHP_VERSION}" ]]; then
     status "Installing PHP extensions..."
@@ -368,4 +370,3 @@ if [[ ! -f "Procfile" ]]; then
     echo "web: $bindir/heroku-$engine-apache2" > Procfile
     notice_inline "No Procfile, defaulting to 'web: $bindir/heroku-$engine-apache2'"
 fi
-source $BP_DIR/bin/facedetect
