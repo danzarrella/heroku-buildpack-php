@@ -11,7 +11,7 @@ if [ ! -d "$phalcon_dir" ]; then
   echo "[ERROR] Failed to find PHP-Facedetect directory $phalcon_dir"
   exit
 fi
-cd $phalcon_dir/build
+cd $phalcon_dir
  
 # /app/php/bin/phpize
 # ./configure 
