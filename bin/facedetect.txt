@@ -18,9 +18,9 @@ cd $phalcon_dir
 # make 
 # make install
 
-BUILD_DIR=$1
-ln -s $BUILD_DIR/.heroku /app/.heroku
-export PATH=/app/.heroku/php/bin:$PATH
+### BUILD_DIR=$1
+### ln -s $BUILD_DIR/.heroku /app/.heroku
+### export PATH=/app/.heroku/php/bin:$PATH
 ### bash ./install
 cd
 echo "important extension facedetect into php.ini"
