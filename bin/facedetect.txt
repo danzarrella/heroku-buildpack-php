@@ -13,15 +13,17 @@ if [ ! -d "$phalcon_dir" ]; then
 fi
 cd $phalcon_dir
  
-# /app/php/bin/phpize
-# ./configure --with-php-config=$PHP_ROOT/bin/php-config
-# make 
-# make install
+phpize && ./configure && make && make install
+ 
+###/app/php/bin/phpize
+### ./configure --with-php-config=$PHP_ROOT/bin/php-config
+### make 
+### make install
 
 BUILD_DIR=$1
 ln -s $BUILD_DIR/.heroku /app/.heroku
 export PATH=/app/.heroku/php/bin:$PATH
-### bash ./install
+bash ./install
 cd
 echo "important extension facedetect into php.ini"
 echo "extension=facedetect.so" >> /app/.heroku/php/etc/php/php.ini
