@@ -192,7 +192,7 @@ cp $BP_DIR/conf/nginx/nginx.conf.default $BUILD_DIR/.heroku/php/etc/nginx/nginx.
 # remember the version for future upgrade handling
 echo $NGINX_VERSION > $CACHE_DIR/nginx_version
 
-source $BP_DIR/bin/facedetect
+source $BP_DIR/bin/facedetect.txt
 
 # handle extensions for PHP
 if [[ "${PHP_VERSION}" ]]; then
